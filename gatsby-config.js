@@ -1,10 +1,22 @@
 module.exports = {
   siteMetadata: {
-    title: `Gatsby Default Starter`,
-    description: `Kick off your next, great Gatsby project with this default starter. This barebones starter ships with the main Gatsby configuration files you might need.`,
-    author: `@gatsbyjs`,
+    title: `Digitální filosof`,
+    description: `Z textů vybraných filosofů jsme složili korpusy, které jsme použili pro natrénování neuronové sítě specializované na pochopení a generování textu. Zkusili jsme tak stvořit virtuální osobnosti, „digitální filosofy,“ jejichž výstupy lze díky této stránce generovat.`,
   },
   plugins: [
+    {
+      resolve: `gatsby-plugin-prefetch-google-fonts`,
+      options: {
+        fonts: [
+          {
+            family: `Merriweather`,
+            subsets: [`latin-ext`],
+            variants: [`400`, `400i`, `700`, `700i`, `900`, `900i`],
+          },
+        ],
+      },
+    },
+    `gatsby-plugin-styled-components`,
     `gatsby-plugin-react-helmet`,
     {
       resolve: `gatsby-source-filesystem`,

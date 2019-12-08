@@ -1,43 +1,38 @@
-/**
- * SEO component that queries for data with
- *  Gatsby's useStaticQuery React hook
- *
- * See: https://www.gatsbyjs.org/docs/use-static-query/
- */
-
 import React from "react"
 import PropTypes from "prop-types"
 import Helmet from "react-helmet"
 import { useStaticQuery, graphql } from "gatsby"
 
-function SEO({ description, lang, meta, title }) {
-  const { site } = useStaticQuery(
+function TitleAndMetaTags(props) {
+  const {
+    site: { siteMetadata },
+  } = useStaticQuery(
     graphql`
       query {
         site {
           siteMetadata {
             title
             description
-            author
           }
         }
       }
     `
   )
 
-  const metaDescription = description || site.siteMetadata.description
+  const title = props.title
+    ? `${props.title} – ${siteMetadata.title}`
+    : siteMetadata.title
 
   return (
     <Helmet
       htmlAttributes={{
-        lang,
+        lang: "cs",
       }}
       title={title}
-      titleTemplate={`%s | ${site.siteMetadata.title}`}
       meta={[
         {
           name: `description`,
-          content: metaDescription,
+          content: siteMetadata.description,
         },
         {
           property: `og:title`,
@@ -45,7 +40,7 @@ function SEO({ description, lang, meta, title }) {
         },
         {
           property: `og:description`,
-          content: metaDescription,
+          content: siteMetadata.description,
         },
         {
           property: `og:type`,
@@ -56,33 +51,20 @@ function SEO({ description, lang, meta, title }) {
           content: `summary`,
         },
         {
-          name: `twitter:creator`,
-          content: site.siteMetadata.author,
-        },
-        {
           name: `twitter:title`,
           content: title,
         },
         {
           name: `twitter:description`,
-          content: metaDescription,
+          content: siteMetadata.description,
         },
-      ].concat(meta)}
+      ]}
     />
   )
 }
 
-SEO.defaultProps = {
-  lang: `en`,
-  meta: [],
-  description: ``,
+TitleAndMetaTags.propTypes = {
+  title: PropTypes.string,
 }
 
-SEO.propTypes = {
-  description: PropTypes.string,
-  lang: PropTypes.string,
-  meta: PropTypes.arrayOf(PropTypes.object),
-  title: PropTypes.string.isRequired,
-}
-
-export default SEO
+export default TitleAndMetaTags
