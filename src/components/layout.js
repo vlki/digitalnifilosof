@@ -55,7 +55,7 @@ const Layout = ({ children }) => {
       {children}
       <footer
         css={css`
-          margin: 70px auto 0;
+          margin: 70px auto 70px;
           max-width: 560px;
           padding: 0 20px;
         `}
