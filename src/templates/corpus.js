@@ -1,6 +1,7 @@
 import React, { useState } from "react"
 import { Link } from "gatsby"
 import { css } from "styled-components"
+import promiseRetry from "promise-retry"
 
 import Layout from "../components/Layout"
 import TitleAndMetaTags from "../components/TitleAndMetaTags"
@@ -62,25 +63,22 @@ const Form = ({ corpus }) => {
     setIsGenerating(true)
 
     const sendingPrefix = prefix
-    fetch(
-      "https://gpt2.digitalnifilosof.cz/?length=100&prefix=" +
-        encodeURIComponent(sendingPrefix)
-    ).then(response => {
-      console.log("fetch", { response })
-
-      if (!response.error) {
-        response.json().then(payload => {
-          setGeneratedTexts([
-            {
-              timestamp: Date.now(),
-              prefix: sendingPrefix,
-              text: payload.text,
-            },
-            ...generatedTexts,
-          ])
-          setIsGenerating(false)
-        })
-      }
+    promiseRetry(
+      (retry, retryNumber) => {
+        console.log("attempt number", retryNumber)
+        return fetchGeneratedText(sendingPrefix).catch(retry)
+      },
+      { retries: 5, minTimeout: 0, maxTimeout: 0 }
+    ).then(text => {
+      setGeneratedTexts([
+        {
+          timestamp: Date.now(),
+          prefix: sendingPrefix,
+          text: text,
+        },
+        ...generatedTexts,
+      ])
+      setIsGenerating(false)
     })
 
     e.stopPropagation()
@@ -95,7 +93,7 @@ const Form = ({ corpus }) => {
         `}
       >
         <label
-          for="prefix"
+          htmlFor="prefix"
           css={css`
             font-weight: 700;
           `}
@@ -125,7 +123,7 @@ const Form = ({ corpus }) => {
         >
           Například:{" "}
           {corpus.examplePrefixes.map((prefix, index) => (
-            <>
+            <React.Fragment key={index}>
               {index > 0 && index !== corpus.examplePrefixes.length - 1 && (
                 <>, </>
               )}
@@ -143,7 +141,7 @@ const Form = ({ corpus }) => {
               >
                 {prefix}
               </span>
-            </>
+            </React.Fragment>
           ))}
         </span>
       </div>
@@ -151,6 +149,7 @@ const Form = ({ corpus }) => {
         disabled={isGenerating}
         type="submit"
         css={css`
+          display: block;
           margin: 25px 0 0 0;
           background-color: #e4121d;
           color: white;
@@ -168,6 +167,15 @@ const Form = ({ corpus }) => {
       >
         {isGenerating ? "Generuji…" : "Generovat"}
       </button>
+      <span
+        css={css`
+          font-size: 14px;
+          margin-top: 5px;
+          display: ${isGenerating ? "block" : "none"};
+        `}
+      >
+        S generováním mějte prosím trpělivost, trvá obvykle 30 sekund.
+      </span>
 
       {generatedTexts.length > 0 && (
         <div
@@ -221,3 +229,18 @@ const renderTextWithHighlightedPrefix = (text, prefix) => {
 }
 
 const convertNewlinesToBr = text => text.replace(/(?:\r\n|\r|\n)/g, "<br />")
+
+const fetchGeneratedText = prefix => {
+  return fetch(
+    "https://gpt2.digitalnifilosof.cz/?length=100&prefix=" +
+      encodeURIComponent(prefix)
+  ).then(response => {
+    if (!response.error) {
+      return response.json().then(payload => {
+        return payload.text
+      })
+    } else {
+      return Promise.reject()
+    }
+  })
+}

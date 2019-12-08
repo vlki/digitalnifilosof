@@ -86,6 +86,14 @@ const Layout = ({ children }) => {
             />
           </a>
         </p>
+        <p>
+          Web za pomoci knihoven{" "}
+          <a href="https://github.com/minimaxir/gpt-2-simple">gpt-2-simple</a> a{" "}
+          <a href="https://github.com/minimaxir/gpt-2-cloud-run">
+            gpt-2-cloud-run
+          </a>{" "}
+          vytvořil <a href="mailto:jan.vlcek@vlki.cz">Jan Vlček</a>.
+        </p>
       </footer>
     </>
   )
