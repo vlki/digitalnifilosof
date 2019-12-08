@@ -1,10 +1,8 @@
 import React, { useState } from "react"
 import { Link } from "gatsby"
 import { css } from "styled-components"
-import "whatwg-fetch"
 
 import Layout from "../components/Layout"
-import Image from "../components/image"
 import TitleAndMetaTags from "../components/TitleAndMetaTags"
 
 const CorpusTemplate = ({ pageContext: { corpus } }) => (

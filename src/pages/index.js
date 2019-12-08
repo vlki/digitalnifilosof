@@ -1,7 +1,6 @@
-import React, { useState } from "react"
+import React from "react"
 import { Link, useStaticQuery, graphql } from "gatsby"
 import { css } from "styled-components"
-import "whatwg-fetch"
 
 import Layout from "../components/Layout"
 import TitleAndMetaTags from "../components/TitleAndMetaTags"
