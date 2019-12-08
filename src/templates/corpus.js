@@ -63,7 +63,7 @@ const Form = ({ corpus }) => {
 
     const sendingPrefix = prefix
     fetch(
-      "http://46.101.129.163/?length=100&prefix=" +
+      "https://gpt2.digitalnifilosof.cz/?length=100&prefix=" +
         encodeURIComponent(sendingPrefix)
     ).then(response => {
       console.log("fetch", { response })
