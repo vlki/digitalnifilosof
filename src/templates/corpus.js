@@ -69,17 +69,24 @@ const Form = ({ corpus }) => {
         return fetchGeneratedText(sendingPrefix).catch(retry)
       },
       { retries: 5, minTimeout: 0, maxTimeout: 0 }
-    ).then(text => {
-      setGeneratedTexts([
-        {
-          timestamp: Date.now(),
-          prefix: sendingPrefix,
-          text: text,
-        },
-        ...generatedTexts,
-      ])
-      setIsGenerating(false)
-    })
+    )
+      .then(text => {
+        setGeneratedTexts([
+          {
+            timestamp: Date.now(),
+            prefix: sendingPrefix,
+            text: text,
+          },
+          ...generatedTexts,
+        ])
+        setIsGenerating(false)
+      })
+      .catch(() => {
+        window.alert(
+          "Generování se nepodařilo, omlouváme se, zkuste jej prosím za moment znovu."
+        )
+        setIsGenerating(false)
+      })
 
     e.stopPropagation()
     e.preventDefault()
