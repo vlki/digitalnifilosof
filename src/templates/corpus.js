@@ -7,8 +7,8 @@ import Layout from "../components/Layout"
 import TitleAndMetaTags from "../components/TitleAndMetaTags"
 
 const CorpusTemplate = ({ pageContext: { corpus } }) => (
-  <Layout>
-    <TitleAndMetaTags />
+  <Layout noIntro>
+    <TitleAndMetaTags title={corpus.philosophers} />
     <main
       css={css`
         margin: 34px auto 0;
@@ -35,7 +35,7 @@ const CorpusTemplate = ({ pageContext: { corpus } }) => (
           ← Zpět na výběr korpusu
         </Link>
       </div>
-      <h2>Korpus: {corpus.philosophers}</h2>
+      <h2>{corpus.philosophers}</h2>
       <p>
         Texty: <span dangerouslySetInnerHTML={{ __html: corpus.texts }} />
       </p>
