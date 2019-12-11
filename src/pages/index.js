@@ -15,7 +15,6 @@ const IndexPage = () => {
             philosophers
             texts
             authors
-            disabled
           }
         }
       }
@@ -46,8 +45,7 @@ const IndexPage = () => {
           {allCorpus.nodes.map(corpus => (
             <Link
               key={corpus.slug}
-              to={corpus.disabled ? undefined : "/" + corpus.slug}
-              disabled
+              to={"/" + corpus.slug}
               css={css`
                 display: block;
                 flex: 1 0 280px;
@@ -55,17 +53,13 @@ const IndexPage = () => {
                 margin: 12px;
                 padding: 12px 15px;
                 box-shadow: 5px 5px 0px 0px rgba(239, 239, 239, 1);
-                cursor: ${corpus.disabled ? "default" : "pointer"};
+                cursor: pointer;
                 text-decoration: none;
                 color: black;
-                opacity: ${corpus.disabled ? "0.5" : "1"};
 
                 &:hover {
-                  border-color: ${corpus.disabled ? "#979797" : "#e4121d"};
-                  box-shadow: 5px 5px 0px 0px
-                    ${corpus.disabled
-                      ? "rgba(239, 239, 239, 1)"
-                      : "rgba(255, 205, 208, 1)"};
+                  border-color: #e4121d;
+                  box-shadow: 5px 5px 0px 0px rgba(255, 205, 208, 1);
                 }
               `}
             >

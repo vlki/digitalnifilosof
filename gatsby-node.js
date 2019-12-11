@@ -3,51 +3,82 @@ const path = require("path")
 exports.sourceNodes = ({ actions, createNodeId, createContentDigest }) => {
   const corpuses = [
     {
+      slug: "hannah-arendt",
+      dataset: "arendt",
+      philosophers: "Hannah Arendt",
+      texts:
+        "<em>Between Past and Future</em>, <em>On Revolution</em>, <em>Eichmann in Jerusalem</em>, <em>Men in Dark Times</em>, <em>On Violence</em> a <em>The Human Condition</em>",
+      authors: "Jakub Jetmar, Jiří Logojda, Štěpán Šanda",
+      intro: "",
+      examplePrefixes: [],
+    },
+    {
       slug: "gilles-deleuze-and-felix-guattari",
+      dataset: "deleuze_guattari",
       philosophers: "Gilles Deleuze & Félix Guattari",
       texts:
         "<em>Anti-Oidipus</em>, <em>Tisíc plošin</em> a&nbsp;<em>Co je filosofie?</em>",
       authors: "Veronika Hanáková, Tomáš Kovařík, Jan Vlček",
+      intro: "",
       examplePrefixes: [
         "Rhizome is",
         "What is the difference between artificial and human brain?",
       ],
     },
     {
+      slug: "michel-foucault",
+      dataset: "foucault",
+      philosophers: "Michel Foucault",
+      texts:
+        "<em>Dějiny sexuality I,&nbsp;II,&nbsp;III</em>, <em>Dějiny šílenství</em>, <em>Archeologie vědění</em> a&nbsp;<em>Zrození kliniky</em>",
+      authors: "Anna Lamberová, Karolína Foitlová, Filip Štochl",
+      intro:
+        "Michel Foucault je reprezentantem francouzské intelektuální avantagardy 70. let 20. století. Ačkoliv samotný Foucault odmítal být označován za filozofa, bývá mnohými považován za představitele filozofie tzv. poststrukturalismu. Také byl profesorem na prestižní francouzské univerzitě Collège de France, historikem a teoretikem kultury. Foucaultovo starší dílo je produktem jeho snahy o porozumění společnosti skrze archeologii vědění. Ve svých knihách se zabývá především chápáním moci a pojmy jako sexualita, šílenství, epistémé nebo diskurz.",
+      examplePrefixes: [
+        "If I lived today, the most important thing I would say to young people would be",
+        "Are you human or machine?",
+      ],
+    },
+    {
+      slug: "vaclav-havel",
+      dataset: "havel",
+      philosophers: "Václav Havel",
+      texts:
+        "<em>Moc bezmocných</em>, projevy z kongresu USA a Fóra 2000, rozhovory s K. Hvížďalou a vybrané eseje",
+      authors: "Jakub Jetmar, Jiří Logojda, Štěpán Šanda",
+      intro: "",
+      examplePrefixes: [],
+    },
+    {
       slug: "tomas-sedlacek",
+      dataset: "sedlacek",
       philosophers: "Tomáš Sedláček",
       texts:
         "<em>Ekonomie dobra a&nbsp;zla</em> a&nbsp;transkripce 3&nbsp;rozhovorů",
       authors: "Adam Cironis, Tomáš Eliáš, Lucie Krejzová",
+      intro: "",
       examplePrefixes: [],
-      disabled: true,
-    },
-    {
-      slug: "michel-foucault",
-      philosophers: "Michel Foucault",
-      texts:
-        "<em>Dějiny sexuality I,&nbsp;II,&nbsp;III</em>, <em>Dějiny šílenství</em>, <em>Archeologie vědění</em> a&nbsp;<em>Zrození kliniky</em>",
-      authors: "Anna Lamberova, Karolína Foitlová, Filip Štochl",
-      examplePrefixes: [],
-      disabled: true,
     },
     {
       slug: "peter-singer",
+      dataset: "singer",
       philosophers: "Peter Singer",
-      texts: "...",
-      authors: "Lenka Pittnerová, Alfred Shubert, Anežka Studničková",
+      texts:
+        "<em>All animals are equal</em>, <em>Famine, affluence and morality</em>, <em>Animal liberation</em>, <em>Practical Ethis</em>, <em>Ethics and Intuitions</em> a <em>Speceism and moral status</em>",
+      authors: "Lenka Pittnerová, Alfréd Schubert, Anežka Studničková",
+      intro: "",
       examplePrefixes: [],
-      disabled: true,
     },
   ]
   corpuses.forEach(corpus => {
     const node = {
       slug: corpus.slug,
+      dataset: corpus.dataset,
       philosophers: corpus.philosophers,
       texts: corpus.texts,
       authors: corpus.authors,
+      intro: corpus.intro,
       examplePrefixes: corpus.examplePrefixes,
-      disabled: corpus.disabled,
       id: createNodeId(`Corpus-${corpus.slug}`),
       internal: {
         type: "Corpus",
@@ -67,11 +98,12 @@ exports.createPages = async ({ graphql, actions, reporter }) => {
         allCorpus {
           nodes {
             slug
+            dataset
             philosophers
             texts
             authors
+            intro
             examplePrefixes
-            disabled
           }
         }
       }

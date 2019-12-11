@@ -1,7 +1,7 @@
 module.exports = {
   siteMetadata: {
     title: `Digitální filosof`,
-    description: `Z textů vybraných filosofů jsme složili korpusy, které jsme použili pro natrénování neuronové sítě specializované na pochopení a generování textu. Zkusili jsme tak stvořit virtuální osobnosti, „digitální filosofy,“ jejichž výstupy lze díky této stránce generovat.`,
+    description: `Z anglických textů vybraných filosofů jsme složili korpusy, které jsme použili pro natrénování neuronové sítě specializované na pochopení a generování textu. Zkusili jsme tak stvořit virtuální osobnosti, „digitální filosofy,“ jejichž generované texty jsme analyzovali. Na tomto webu natrénované sítě zpřístupňujeme, abyste si mohli generování vyzkoušet sami.`,
   },
   plugins: [
     {

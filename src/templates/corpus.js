@@ -36,14 +36,11 @@ const CorpusTemplate = ({ pageContext: { corpus } }) => (
         </Link>
       </div>
       <h2>{corpus.philosophers}</h2>
+      {corpus.intro && <p>{corpus.intro}</p>}
       <p>
-        Texty: <span dangerouslySetInnerHTML={{ __html: corpus.texts }} />
+        Texty v korpusu:{" "}
+        <span dangerouslySetInnerHTML={{ __html: corpus.texts }} />
       </p>
-      {/* <p>
-        Gilles Deleuze bla bla. Lorem ipsum dolor sit amet, consectetur
-        adipiscing elit. Etiam non ligula sed lectus imperdiet convallis.
-        Vivamus pharetra diam eget ligula tristique congue.
-      </p> */}
       <p>Zpracovali: {corpus.authors}</p>
       <Form corpus={corpus} />
     </main>
@@ -66,7 +63,7 @@ const Form = ({ corpus }) => {
     promiseRetry(
       (retry, retryNumber) => {
         console.log("attempt number", retryNumber)
-        return fetchGeneratedText(sendingPrefix).catch(retry)
+        return fetchGeneratedText(corpus.dataset, sendingPrefix).catch(retry)
       },
       { retries: 5, minTimeout: 0, maxTimeout: 0 }
     )
@@ -123,34 +120,38 @@ const Form = ({ corpus }) => {
             }
           `}
         />
-        <span
-          css={css`
-            font-size: 14px;
-          `}
-        >
-          Například:{" "}
-          {corpus.examplePrefixes.map((prefix, index) => (
-            <React.Fragment key={index}>
-              {index > 0 && index !== corpus.examplePrefixes.length - 1 && (
-                <>, </>
-              )}
-              {index === corpus.examplePrefixes.length - 1 && <>, nebo </>}
-              <span
-                onClick={() => setPrefix(prefix)}
-                css={css`
-                  text-decoration: underline;
-                  cursor: pointer;
-                  &:hover,
-                  &:focus {
-                    color: #e4121d;
-                  }
-                `}
-              >
-                {prefix}
-              </span>
-            </React.Fragment>
-          ))}
-        </span>
+        {corpus.examplePrefixes.length > 0 && (
+          <span
+            css={css`
+              font-size: 14px;
+            `}
+          >
+            Například:{" "}
+            {corpus.examplePrefixes.map((prefix, index) => (
+              <React.Fragment key={index}>
+                {index > 0 && index !== corpus.examplePrefixes.length - 1 && (
+                  <>, </>
+                )}
+                {index !== 0 && index === corpus.examplePrefixes.length - 1 && (
+                  <>, nebo </>
+                )}
+                <span
+                  onClick={() => setPrefix(prefix)}
+                  css={css`
+                    text-decoration: underline;
+                    cursor: pointer;
+                    &:hover,
+                    &:focus {
+                      color: #e4121d;
+                    }
+                  `}
+                >
+                  {prefix}
+                </span>
+              </React.Fragment>
+            ))}
+          </span>
+        )}
       </div>
       <button
         disabled={isGenerating}
@@ -237,10 +238,11 @@ const renderTextWithHighlightedPrefix = (text, prefix) => {
 
 const convertNewlinesToBr = text => text.replace(/(?:\r\n|\r|\n)/g, "<br />")
 
-const fetchGeneratedText = prefix => {
+const fetchGeneratedText = (dataset, prefix) => {
+  const encodedPrefix = encodeURIComponent(prefix)
+
   return fetch(
-    "https://gpt2.digitalnifilosof.cz/?length=100&prefix=" +
-      encodeURIComponent(prefix)
+    `https://gpt2.digitalnifilosof.cz/?dataset=${dataset}&length=100&prefix=${encodedPrefix}`
   ).then(response => {
     if (!response.error) {
       return response.json().then(payload => {
