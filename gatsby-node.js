@@ -56,8 +56,12 @@ exports.sourceNodes = ({ actions, createNodeId, createContentDigest }) => {
       texts:
         "<em>Ekonomie dobra a&nbsp;zla</em> a&nbsp;transkripce 3&nbsp;rozhovorů",
       authors: "Adam Cironis, Tomáš Eliaš, Lucie Krejzlová",
-      intro: "",
-      examplePrefixes: [],
+      intro:
+        "Tomáš Sedláček je český významný ekonom a filozof, který v minulosti působil jako poradce prezidenta Václava Havla a ministra financí. Je autorem knihy Ekonomie dobra a zla, která byla přeložena do 21 jazyků. V současné době působí jako hlavní makroekonomický stratég ČSOB.",
+      examplePrefixes: [
+        "Do you think that happiness comes from wealth?",
+        "What is a guaranteed path to success?",
+      ],
     },
     {
       slug: "peter-singer",
