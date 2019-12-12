@@ -44,7 +44,7 @@ exports.sourceNodes = ({ actions, createNodeId, createContentDigest }) => {
       dataset: "havel",
       philosophers: "Václav Havel",
       texts:
-        "<em>Moc bezmocných</em>, projevy z kongresu USA a Fóra 2000, rozhovory s K. Hvížďalou a vybrané eseje",
+        "<em>Moc bezmocných</em>, projevy z&nbsp;kongresu USA a&nbsp;Fóra 2000, rozhovory s&nbsp;K.&nbsp;Hvížďalou a&nbsp;vybrané eseje",
       authors: "Jakub Jetmar, Jiří Logojda, Štěpán Šanda",
       intro: "",
       examplePrefixes: [],
@@ -55,7 +55,7 @@ exports.sourceNodes = ({ actions, createNodeId, createContentDigest }) => {
       philosophers: "Tomáš Sedláček",
       texts:
         "<em>Ekonomie dobra a&nbsp;zla</em> a&nbsp;transkripce 3&nbsp;rozhovorů",
-      authors: "Adam Cironis, Tomáš Eliáš, Lucie Krejzová",
+      authors: "Adam Cironis, Tomáš Eliaš, Lucie Krejzlová",
       intro: "",
       examplePrefixes: [],
     },
@@ -64,7 +64,7 @@ exports.sourceNodes = ({ actions, createNodeId, createContentDigest }) => {
       dataset: "singer",
       philosophers: "Peter Singer",
       texts:
-        "<em>All animals are equal</em>, <em>Famine, affluence and morality</em>, <em>Animal liberation</em>, <em>Practical Ethis</em>, <em>Ethics and Intuitions</em> a <em>Speceism and moral status</em>",
+        "<em>All animals are equal</em>, <em>Famine, affluence and morality</em>, <em>Animal liberation</em>, <em>Practical Ethis</em>, <em>Ethics and Intuitions</em> a&nbsp;<em>Speceism and moral status</em>",
       authors: "Lenka Pittnerová, Alfréd Schubert, Anežka Studničková",
       intro: "",
       examplePrefixes: [],
