@@ -64,7 +64,7 @@ exports.sourceNodes = ({ actions, createNodeId, createContentDigest }) => {
       dataset: "singer",
       philosophers: "Peter Singer",
       texts:
-        "<em>All animals are equal</em>, <em>Famine, affluence and morality</em>, <em>Animal liberation</em>, <em>Practical Ethis</em>, <em>Ethics and Intuitions</em> a&nbsp;<em>Speceism and moral status</em>",
+        "<em>All animals are equal</em>, <em>Famine, affluence and morality</em>, <em>Animal liberation</em>, <em>Practical Ethics</em>, <em>Ethics and Intuitions</em> a&nbsp;<em>Speciesism and moral status</em>",
       authors: "Lenka Pittnerová, Alfréd Schubert, Anežka Studničková",
       intro: "",
       examplePrefixes: [],
