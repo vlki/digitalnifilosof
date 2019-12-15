@@ -26,7 +26,7 @@ function TitleAndMetaTags(props) {
   return (
     <Helmet
       htmlAttributes={{
-        lang: "cs",
+        lang: props.lang,
       }}
       title={title}
       meta={[

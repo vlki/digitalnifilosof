@@ -7,7 +7,7 @@ import TitleAndMetaTags from "../components/TitleAndMetaTags"
 
 const NotFoundPage = () => (
   <Layout noHeaderAndFooter lang="cs">
-    <TitleAndMetaTags />
+    <TitleAndMetaTags lang="cs" />
     <main
       css={css`
         margin: 70px auto 70px;

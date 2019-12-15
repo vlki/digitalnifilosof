@@ -24,7 +24,7 @@ const IndexPage = ({ pageContext: { lang = "cs" } }) => {
 
   return (
     <Layout lang={lang} langLink={lang === "cs" ? "/en/" : "/"}>
-      <TitleAndMetaTags />
+      <TitleAndMetaTags lang={lang} />
       <main
         css={css`
           margin: 34px auto 0;

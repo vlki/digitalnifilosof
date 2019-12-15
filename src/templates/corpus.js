@@ -12,7 +12,7 @@ const CorpusTemplate = ({ pageContext: { corpus, lang = "cs" } }) => (
     lang={lang}
     langLink={lang === "cs" ? "/en/" + corpus.slug : "/" + corpus.slug}
   >
-    <TitleAndMetaTags title={corpus.philosophers} />
+    <TitleAndMetaTags title={corpus.philosophers} lang={lang} />
     <main
       css={css`
         margin: 34px auto 0;
