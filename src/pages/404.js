@@ -6,7 +6,7 @@ import Layout from "../components/Layout"
 import TitleAndMetaTags from "../components/TitleAndMetaTags"
 
 const NotFoundPage = () => (
-  <Layout noHeaderAndFooter>
+  <Layout noHeaderAndFooter lang="cs">
     <TitleAndMetaTags />
     <main
       css={css`

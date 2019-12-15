@@ -6,8 +6,12 @@ import promiseRetry from "promise-retry"
 import Layout from "../components/Layout"
 import TitleAndMetaTags from "../components/TitleAndMetaTags"
 
-const CorpusTemplate = ({ pageContext: { corpus } }) => (
-  <Layout noIntro>
+const CorpusTemplate = ({ pageContext: { corpus, lang = "cs" } }) => (
+  <Layout
+    noIntro
+    lang={lang}
+    langLink={lang === "cs" ? "/en/" + corpus.slug : "/" + corpus.slug}
+  >
     <TitleAndMetaTags title={corpus.philosophers} />
     <main
       css={css`
@@ -23,7 +27,7 @@ const CorpusTemplate = ({ pageContext: { corpus } }) => (
         `}
       >
         <Link
-          to="/"
+          to={lang === "cs" ? "/" : "/en/"}
           css={css`
             font-size: 14px;
             color: black;
@@ -32,24 +36,40 @@ const CorpusTemplate = ({ pageContext: { corpus } }) => (
             }
           `}
         >
-          ← Zpět na výběr korpusu
+          {lang === "cs" && <>← Zpět na výběr korpusu</>}
+          {lang === "en" && <>← Back to list of corpuses</>}
         </Link>
       </div>
       <h2>{corpus.philosophers}</h2>
-      {corpus.intro && <p dangerouslySetInnerHTML={{ __html: corpus.intro }} />}
+      {corpus.intro && lang === "cs" && (
+        <p dangerouslySetInnerHTML={{ __html: corpus.intro }} />
+      )}
       <p>
-        Texty v korpusu:{" "}
-        <span dangerouslySetInnerHTML={{ __html: corpus.texts }} />
+        {lang === "cs" && (
+          <>
+            Texty v korpusu:{" "}
+            <span dangerouslySetInnerHTML={{ __html: corpus.textsCs }} />
+          </>
+        )}
+        {lang === "en" && (
+          <>
+            Texts in corpus:{" "}
+            <span dangerouslySetInnerHTML={{ __html: corpus.textsEn }} />
+          </>
+        )}
       </p>
-      <p>Zpracovali: {corpus.authors}</p>
-      <Form corpus={corpus} />
+      <p>
+        {lang === "cs" && <>Zpracovali:</>}
+        {lang === "en" && <>Created by:</>} {corpus.authors}
+      </p>
+      <Form corpus={corpus} lang={lang} />
     </main>
   </Layout>
 )
 
 export default CorpusTemplate
 
-const Form = ({ corpus }) => {
+const Form = ({ corpus, lang }) => {
   const [prefix, setPrefix] = useState(
     corpus.examplePrefixes.length > 0 ? corpus.examplePrefixes[0] : ""
   )
@@ -102,7 +122,10 @@ const Form = ({ corpus }) => {
             font-weight: 700;
           `}
         >
-          Text, na který má generování navázat (anglicky)
+          {lang === "cs" && (
+            <>Text, na který má generování navázat (anglicky)</>
+          )}
+          {lang === "en" && <>Text the generating should follow</>}
         </label>
         <textarea
           id="prefix"
@@ -126,14 +149,18 @@ const Form = ({ corpus }) => {
               font-size: 14px;
             `}
           >
-            Například:{" "}
+            {lang === "cs" && <>Například:</>}
+            {lang === "en" && <>For example:</>}{" "}
             {corpus.examplePrefixes.map((prefix, index) => (
               <React.Fragment key={index}>
                 {index > 0 && index !== corpus.examplePrefixes.length - 1 && (
                   <>, </>
                 )}
                 {index !== 0 && index === corpus.examplePrefixes.length - 1 && (
-                  <>, nebo </>
+                  <>
+                    {lang === "cs" && <> nebo </>}
+                    {lang === "en" && <> or </>}
+                  </>
                 )}
                 <span
                   onClick={() => setPrefix(prefix)}
@@ -173,7 +200,8 @@ const Form = ({ corpus }) => {
           }
         `}
       >
-        {isGenerating ? "Generuji…" : "Generovat"}
+        {lang === "cs" && <>{isGenerating ? "Generuji…" : "Generovat"}</>}
+        {lang === "en" && <>{isGenerating ? "Generating…" : "Generate"}</>}
       </button>
       <span
         css={css`
@@ -182,7 +210,14 @@ const Form = ({ corpus }) => {
           display: ${isGenerating ? "block" : "none"};
         `}
       >
-        S generováním mějte prosím trpělivost, trvá obvykle 30 sekund.
+        {lang === "cs" && (
+          <>S generováním mějte prosím trpělivost, trvá obvykle 30 sekund.</>
+        )}
+        {lang === "en" && (
+          <>
+            Please be patient with the generating, it usually takes 30 seconds.
+          </>
+        )}
       </span>
 
       {generatedTexts.length > 0 && (
@@ -191,7 +226,8 @@ const Form = ({ corpus }) => {
             margin: 40px 0 0 0;
           `}
         >
-          <h3>Vygenerované texty</h3>
+          {lang === "cs" && <h3>Vygenerované texty</h3>}
+          {lang === "cs" && <h3>Generated texts</h3>}
           {generatedTexts.map((generatedText, index) => (
             <div
               key={generatedText.timestamp}

@@ -5,7 +5,7 @@ import { css } from "styled-components"
 import Layout from "../components/Layout"
 import TitleAndMetaTags from "../components/TitleAndMetaTags"
 
-const IndexPage = () => {
+const IndexPage = ({ pageContext: { lang = "cs" } }) => {
   const { allCorpus } = useStaticQuery(
     graphql`
       query {
@@ -13,7 +13,8 @@ const IndexPage = () => {
           nodes {
             slug
             philosophers
-            texts
+            textsCs
+            textsEn
             authors
           }
         }
@@ -22,7 +23,7 @@ const IndexPage = () => {
   )
 
   return (
-    <Layout>
+    <Layout lang={lang} langLink={lang === "cs" ? "/en/" : "/"}>
       <TitleAndMetaTags />
       <main
         css={css`
@@ -31,7 +32,8 @@ const IndexPage = () => {
           padding: 0 20px;
         `}
       >
-        <h2>Vyberte korpus</h2>
+        {lang === "cs" && <h2>Vyberte korpus</h2>}
+        {lang === "en" && <h2>Choose corpus</h2>}
 
         <div
           css={css`
@@ -45,7 +47,7 @@ const IndexPage = () => {
           {allCorpus.nodes.map(corpus => (
             <Link
               key={corpus.slug}
-              to={"/" + corpus.slug}
+              to={lang === "cs" ? "/" + corpus.slug : "/en/" + corpus.slug}
               css={css`
                 display: block;
                 flex: 1 0 280px;
@@ -69,15 +71,30 @@ const IndexPage = () => {
                   margin: 7px 0 0 0;
                 `}
               >
-                Texty:{" "}
-                <span dangerouslySetInnerHTML={{ __html: corpus.texts }} />
+                {lang === "cs" && (
+                  <>
+                    Texty:{" "}
+                    <span
+                      dangerouslySetInnerHTML={{ __html: corpus.textsCs }}
+                    />
+                  </>
+                )}
+                {lang === "en" && (
+                  <>
+                    Texts:{" "}
+                    <span
+                      dangerouslySetInnerHTML={{ __html: corpus.textsEn }}
+                    />
+                  </>
+                )}
               </p>
               <p
                 css={css`
                   margin: 7px 0 0 0;
                 `}
               >
-                Zpracovali: {corpus.authors}
+                {lang === "cs" && <>Zpracovali:</>}
+                {lang === "en" && <>Created by:</>} {corpus.authors}
               </p>
             </Link>
           ))}
