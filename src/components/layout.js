@@ -84,8 +84,8 @@ const Layout = ({ children, lang, langLink, noHeaderAndFooter, noIntro }) => {
                   <p>
                     We composed corpuses from texts of several philosophers and
                     used them to train a&nbsp;neural network specialized in
-                    understanding language and generating new texts. That is how
-                    we tried to create virtual characters of "digital
+                    understanding language and generating new texts. This way we
+                    tried to create virtual characters of "digital
                     philosophers," whose generated texts we analyzed. Using this
                     website we give you access to the trained nets so you can
                     try generating yourself.
