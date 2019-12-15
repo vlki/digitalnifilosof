@@ -36,7 +36,7 @@ const CorpusTemplate = ({ pageContext: { corpus } }) => (
         </Link>
       </div>
       <h2>{corpus.philosophers}</h2>
-      {corpus.intro && <p>{corpus.intro}</p>}
+      {corpus.intro && <p dangerouslySetInnerHTML={{ __html: corpus.intro }} />}
       <p>
         Texty v korpusu:{" "}
         <span dangerouslySetInnerHTML={{ __html: corpus.texts }} />

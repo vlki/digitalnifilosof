@@ -9,7 +9,8 @@ exports.sourceNodes = ({ actions, createNodeId, createContentDigest }) => {
       texts:
         "<em>Between Past and Future</em>, <em>On Revolution</em>, <em>Eichmann in Jerusalem</em>, <em>Men in Dark Times</em>, <em>On Violence</em> a <em>The Human Condition</em>",
       authors: "Jakub Jetmar, Jiří Logojda, Štěpán Šanda",
-      intro: "",
+      intro:
+        "Hannah Arendt, německo-židovská emigrantka, je možná nejznámější teoretičkou totalitarismu. Jakkoliv se ve své pozdější práci posouvá od pojmu radikální zlo k banalitě zla, její <em>Původ totalitarismu</em>, který vyšel jako bezprostřední reakce na hrůzy druhé světové války, je kanonickým dílem pro teorii totalitarismu. Mimo to se ve svém díle zabývá i masovou společností a kulturou nebo rolí a zodpovědností jednotlivce ve společnosti.",
       examplePrefixes: [],
     },
     {
@@ -19,10 +20,11 @@ exports.sourceNodes = ({ actions, createNodeId, createContentDigest }) => {
       texts:
         "<em>Anti-Oidipus</em>, <em>Tisíc plošin</em> a&nbsp;<em>Co je filosofie?</em>",
       authors: "Veronika Hanáková, Tomáš Kovařík, Jan Vlček",
-      intro: "",
+      intro:
+        "Gilles Deleuze (1925–1995) byl významný francouzký teoretik věnující se filozofii, literatuře, filmu a umění, kterého řadíme do poststrukturalismu. Napsal mnoho děl, ale tři napsané spolu s Félixem Guattarim (1930–1992) jsou ty nejpopulárnější. V prvním z nich, <em>Anti-Oidipus</em>, nahlíží na společnost perspektivou stroje — člověk jako stroj poskládaný ze strojů tvořící další větší stroje, všechny stroje pak hnané chtíčem a produkcí. V díle <em>Tisíc plošin</em> popisují kromě jiného vědění jako stále se měnící síť bez začátku a konce, kterou přirovnávají k rhizomu, oddenku, kořenovité struktuře, ze které vidíme jen záblesky a nikdy ne strukturu celou. V posledním <em>Co je filosofie?</em> je pak hlavním tématem definování role filosofie jako tvoření pojmů, stojící vedle vědy a umění. (Pozn.: Shrnutí děl jsou VELMI zjednodušená pro alespoň základní přehled.)",
       examplePrefixes: [
-        "Rhizome is",
-        "What is the difference between artificial and human brain?",
+        "What is the motivation of an artificial intelligence?",
+        "For artificial brain to be a philosopher, it has to",
       ],
     },
     {
@@ -46,7 +48,8 @@ exports.sourceNodes = ({ actions, createNodeId, createContentDigest }) => {
       texts:
         "<em>Moc bezmocných</em>, projevy z&nbsp;kongresu USA a&nbsp;Fóra 2000, rozhovory s&nbsp;K.&nbsp;Hvížďalou a&nbsp;vybrané eseje",
       authors: "Jakub Jetmar, Jiří Logojda, Štěpán Šanda",
-      intro: "",
+      intro:
+        "Mimo politika-prezidenta také disident, esejista a dramatik. V 70. letech píše slavný esej <em>Moc bezmocných</em>, v němž definuje post-totalitní systém a přemýšlí nad rolí a zodpovědností jedince v systému. V tomto období je také kritikem masové kultury i toho, že tradiční západní demokracie „nabízely způsob, jak zásadně čelit ‚samopohybu‘ technické civilizace i&nbsp;industriální a&nbsp;konzumní společnosti.“",
       examplePrefixes: [],
     },
     {
@@ -57,7 +60,7 @@ exports.sourceNodes = ({ actions, createNodeId, createContentDigest }) => {
         "<em>Ekonomie dobra a&nbsp;zla</em> a&nbsp;transkripce 3&nbsp;rozhovorů",
       authors: "Adam Cironis, Tomáš Eliaš, Lucie Krejzlová",
       intro:
-        "Tomáš Sedláček je český významný ekonom a filozof, který v minulosti působil jako poradce prezidenta Václava Havla a ministra financí. Je autorem knihy Ekonomie dobra a zla, která byla přeložena do 21 jazyků. V současné době působí jako hlavní makroekonomický stratég ČSOB.",
+        "Tomáš Sedláček je český významný ekonom a&nbsp;filozof, který v&nbsp;minulosti působil jako poradce prezidenta Václava Havla a&nbsp;ministra financí. Je autorem knihy <em>Ekonomie dobra a&nbsp;zla</em>, která byla přeložena do 21&nbsp;jazyků. V&nbsp;současné době působí jako hlavní makroekonomický stratég ČSOB.",
       examplePrefixes: [
         "Do you think that happiness comes from wealth?",
         "What is a guaranteed path to success?",
