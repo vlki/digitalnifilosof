@@ -79,36 +79,23 @@ const Layout = ({ children, noHeaderAndFooter, noIntro }) => {
             <a href="https://www.foreignaffairs.com/articles/2019-08-02/not-your-fathers-bots">
               publikovaný ve <em>Foreign Affairs</em>
             </a>{" "}
-            ukázal, že čtenáři vnímají texty generované z&nbsp;GPT-2 skoro
+            ukázal, že čtenáři vnímají texty generované pomocí GPT-2 skoro
             stejně důvěryhodně jako opravdové články z&nbsp;New York Times.{" "}
             <a href="https://jalammar.github.io/illustrated-gpt2/">
               Přečtěte si, jak GPT-2 funguje
             </a>
             .
           </p>
-          {/* <p>
-            Generované texty lze použít za dodržení podmínek licence{" "}
-            <a
-              rel="license"
-              href="http://creativecommons.org/licenses/by-nc/4.0/"
-            >
-              Creative Commons Attribution-NonCommercial 4.0
-            </a>
-            .
-            <a
-              rel="license"
-              href="http://creativecommons.org/licenses/by-nc/4.0/"
-            >
-              <img
-                alt="Creative Commons License"
-                src="https://i.creativecommons.org/l/by-nc/4.0/88x31.png"
-              />
-            </a>
-          </p> */}
           <p>
-            Nejsme si jistí, jak české autorské právo řeší dílo vytvořené umělou
-            inteligencí. Prozatimně lze použít generované texty za dodržení
-            podmínek licence{" "}
+            Dle výkladu autorského práva Janem Zibnerem a&nbsp;Matějem Myškou
+            pro díla vytvořená umělou inteligencí{" "}
+            <a href="https://www.iurium.cz/2019/04/11/umela-inteligence-vyzva-autorstvi/">
+              publikovaného na portálu Iuirum
+            </a>{" "}
+            jsou autory generovaných textů zpracovatelé daného korpusu.
+            V&nbsp;případě, že vepíšete originální text, na který generování
+            navazuje, pak stáváte se spoluautorem. Jako zpracovatelé korpusů
+            svolujeme užít generované texty za dodržení podmínek licence{" "}
             <a
               rel="license"
               href="http://creativecommons.org/licenses/by-nc/4.0/"

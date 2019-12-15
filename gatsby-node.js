@@ -11,7 +11,7 @@ exports.sourceNodes = ({ actions, createNodeId, createContentDigest }) => {
       authors: "Jakub Jetmar, Jiří Logojda, Štěpán Šanda",
       intro:
         "Hannah Arendt, německo-židovská emigrantka, je možná nejznámější teoretičkou totalitarismu. Jakkoliv se ve své pozdější práci posouvá od pojmu radikální zlo k banalitě zla, její <em>Původ totalitarismu</em>, který vyšel jako bezprostřední reakce na hrůzy druhé světové války, je kanonickým dílem pro teorii totalitarismu. Mimo to se ve svém díle zabývá i masovou společností a kulturou nebo rolí a zodpovědností jednotlivce ve společnosti.",
-      examplePrefixes: [],
+      examplePrefixes: ["Evil is banal, because", "Totalitarian system is"],
     },
     {
       slug: "gilles-deleuze-and-felix-guattari",
@@ -50,7 +50,10 @@ exports.sourceNodes = ({ actions, createNodeId, createContentDigest }) => {
       authors: "Jakub Jetmar, Jiří Logojda, Štěpán Šanda",
       intro:
         "Mimo politika-prezidenta také disident, esejista a dramatik. V 70. letech píše slavný esej <em>Moc bezmocných</em>, v němž definuje post-totalitní systém a přemýšlí nad rolí a zodpovědností jedince v systému. V tomto období je také kritikem masové kultury i toho, že tradiční západní demokracie „nabízely způsob, jak zásadně čelit ‚samopohybu‘ technické civilizace i&nbsp;industriální a&nbsp;konzumní společnosti.“",
-      examplePrefixes: [],
+      examplePrefixes: [
+        "Post-totalitarian system is",
+        "Any existential revolution should provide hope",
+      ],
     },
     {
       slug: "tomas-sedlacek",
