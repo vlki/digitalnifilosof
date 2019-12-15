@@ -100,7 +100,9 @@ const Form = ({ corpus, lang }) => {
       })
       .catch(() => {
         window.alert(
-          "Generování se nepodařilo, omlouváme se, zkuste jej prosím za moment znovu."
+          lang === "cs"
+            ? "Generování se nepodařilo, omlouváme se, zkuste jej prosím za moment znovu."
+            : "Sorry, generating failed, try it again in a moment please."
         )
         setIsGenerating(false)
       })
@@ -227,7 +229,7 @@ const Form = ({ corpus, lang }) => {
           `}
         >
           {lang === "cs" && <h3>Vygenerované texty</h3>}
-          {lang === "cs" && <h3>Generated texts</h3>}
+          {lang === "en" && <h3>Generated texts</h3>}
           {generatedTexts.map((generatedText, index) => (
             <div
               key={generatedText.timestamp}
@@ -278,7 +280,7 @@ const fetchGeneratedText = (dataset, prefix) => {
   const encodedPrefix = encodeURIComponent(prefix)
 
   return fetch(
-    `https://gpt2.digitalnifilosof.cz/?dataset=${dataset}&length=100&prefix=${encodedPrefix}`
+    `http://46.101.129.163/?dataset=${dataset}&length=100&prefix=${encodedPrefix}`
   ).then(response => {
     if (!response.error) {
       return response.json().then(payload => {
