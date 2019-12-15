@@ -52,8 +52,8 @@ const Layout = ({ children, noHeaderAndFooter, noIntro }) => {
                 <a href="http://novamedia.ff.cuni.cz/">
                   Studiích nových médií na FF UK
                 </a>{" "}
-                během podzimu 2019 Ditou Malečkovou (ÚISK FF UK) a&nbsp;Janem
-                Tylem (Alpha Industries).
+                během podzimu 2019 Mgr.&nbsp;Ditou Malečkovou, Ph.D. (ÚISK FF
+                UK) a&nbsp;Janem Tylem (Alpha Industries s.r.o.).
               </p>
             </>
           )}
@@ -71,11 +71,18 @@ const Layout = ({ children, noHeaderAndFooter, noIntro }) => {
           <p>
             Využíváme{" "}
             <a href="https://openai.com/blog/better-language-models/">
-              jazykový model GPT-2 vydaný společností OpenAI
-            </a>
-            , konkrétně verzi se 345 miliony parametrů.{" "}
+              jazykový model GPT-2 od organizace OpenAI
+            </a>{" "}
+            vydaný v&nbsp;únoru 2019, konkrétně verzi se 345 miliony parametrů.
+            Za zmínku stojí, že výzkum Sarah Kreps a&nbsp;Miles McCain
+            z&nbsp;Cornell University{" "}
+            <a href="https://www.foreignaffairs.com/articles/2019-08-02/not-your-fathers-bots">
+              publikovaný ve <em>Foreign Affairs</em>
+            </a>{" "}
+            ukázal, že čtenáři vnímají texty generované z&nbsp;GPT-2 skoro
+            stejně důvěryhodně jako opravdové články z&nbsp;New York Times.{" "}
             <a href="https://jalammar.github.io/illustrated-gpt2/">
-              Přečtěte si, jak funguje
+              Přečtěte si, jak GPT-2 funguje
             </a>
             .
           </p>
