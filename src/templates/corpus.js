@@ -280,7 +280,7 @@ const fetchGeneratedText = (dataset, prefix) => {
   const encodedPrefix = encodeURIComponent(prefix)
 
   return fetch(
-    `http://46.101.129.163/?dataset=${dataset}&length=100&prefix=${encodedPrefix}`
+    `https://digitalnifilosofgpt2.vlki.cz/?dataset=${dataset}&length=100&prefix=${encodedPrefix}`
   ).then(response => {
     if (!response.error) {
       return response.json().then(payload => {
