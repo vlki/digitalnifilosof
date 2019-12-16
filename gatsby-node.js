@@ -22,7 +22,7 @@ exports.sourceNodes = ({ actions, createNodeId, createContentDigest }) => {
       textsCs:
         "<em>Anti-Oidipus</em>, <em>Tisíc plošin</em> a&nbsp;<em>Co je filosofie?</em>",
       textsEn:
-        "<em>Anti-Oedipus</em>, <em>A Thousand Plateaus</em> a&nbsp;<em>What Is Philosophy?</em>",
+        "<em>Anti-Oedipus</em>, <em>A Thousand Plateaus</em> and <em>What Is Philosophy?</em>",
       authors: "Veronika Hanáková, Tomáš Kovařík, Jan Vlček",
       intro:
         "Gilles Deleuze (1925–1995) byl významný francouzký teoretik věnující se filozofii, literatuře, filmu a umění, kterého řadíme do poststrukturalismu. Napsal mnoho děl, ale tři napsané spolu s Félixem Guattarim (1930–1992) jsou ty nejpopulárnější. V prvním z nich, <em>Anti-Oidipus</em>, nahlíží na společnost perspektivou stroje — člověk jako stroj poskládaný ze strojů tvořící další větší stroje, všechny stroje pak hnané chtíčem a produkcí. V díle <em>Tisíc plošin</em> popisují kromě jiného vědění jako stále se měnící síť bez začátku a konce, kterou přirovnávají k rhizomu, oddenku, kořenovité struktuře, ze které vidíme jen záblesky a nikdy ne strukturu celou. V posledním <em>Co je filosofie?</em> je pak hlavním tématem definování role filosofie jako tvoření pojmů, stojící vedle vědy a umění. (Pozn.: Shrnutí děl jsou VELMI zjednodušená pro alespoň základní přehled.)",
@@ -36,9 +36,9 @@ exports.sourceNodes = ({ actions, createNodeId, createContentDigest }) => {
       dataset: "foucault",
       philosophers: "Michel Foucault",
       textsCs:
-        "<em>Dějiny sexuality I,&nbsp;II,&nbsp;III</em>, <em>Dějiny šílenství</em>, <em>Archeologie vědění</em> a&nbsp;<em>Zrození kliniky</em>",
+        "<em>Dějiny sexuality I,&nbsp;II,&nbsp;III</em> a&nbsp;<em>Myšlení vnějšku</em>",
       textsEn:
-        "<em>The History of Sexuality I,&nbsp;II,&nbsp;III</em>, <em>Madness and Civilization</em>, <em>The Archaeology of Knowledge</em> and <em>The Birth of the Clinic</em>",
+        "<em>The History of Sexuality I,&nbsp;II,&nbsp;III</em> and <em>Said and written</em>",
       authors: "Anna Lamberová, Karolína Foitlová, Filip Štochl",
       intro:
         "Michel Foucault je reprezentantem francouzské intelektuální avantagardy 70. let 20. století. Ačkoliv samotný Foucault odmítal být označován za filozofa, bývá mnohými považován za představitele filozofie tzv. poststrukturalismu. Také byl profesorem na prestižní francouzské univerzitě Collège de France, historikem a teoretikem kultury. Foucaultovo starší dílo je produktem jeho snahy o porozumění společnosti skrze archeologii vědění. Ve svých knihách se zabývá především chápáním moci a pojmy jako sexualita, šílenství, epistémé nebo diskurz.",
