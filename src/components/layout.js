@@ -125,8 +125,10 @@ const Layout = ({ children, lang, langLink, noHeaderAndFooter, noIntro }) => {
                 jazykový model GPT-2 od organizace OpenAI
               </a>{" "}
               představený v&nbsp;únoru 2019, konkrétně verzi se 345 miliony
-              parametrů. Že je model velmi schopný ukazuje například výzkum
-              Sarah Kreps a&nbsp;Miles McCain z&nbsp;Cornell University{" "}
+              parametrů. Model GPT-2 je tak schopný, že OpenAI vydávala verze
+              postupně kvůli riziku zneužití pro generování dezinformací. Že je
+              to riziko odůvodněné ukazuje například výzkum Sarah Kreps
+              a&nbsp;Miles McCain z&nbsp;Cornell University{" "}
               <a href="https://www.foreignaffairs.com/articles/2019-08-02/not-your-fathers-bots">
                 publikovaný ve <em>Foreign Affairs</em>
               </a>
@@ -145,10 +147,12 @@ const Layout = ({ children, lang, langLink, noHeaderAndFooter, noIntro }) => {
               <a href="https://openai.com/blog/better-language-models/">
                 language model GPT-2 by OpenAI
               </a>{" "}
-              released in February 2019, specifically the version with 345
-              milion parameters. For the capability of the model speaks for
-              example research made by Sarah Kreps and&nbsp;Miles McCain from
-              Cornell University{" "}
+              introduced in February 2019, specifically the version with 345
+              milion parameters. GPT-2 model is so capable that OpenAI decided
+              to release versions gradually, because of the risk of it being
+              misused for generating disinformation. That the risk is real is
+              confirmed for example by research made by Sarah Kreps
+              and&nbsp;Miles McCain from Cornell University{" "}
               <a href="https://www.foreignaffairs.com/articles/2019-08-02/not-your-fathers-bots">
                 published in <em>Foreign Affairs</em>
               </a>
