@@ -1,1 +1,1 @@
-# Digitální filosof
+Website https://digitalnifilosof.cz
