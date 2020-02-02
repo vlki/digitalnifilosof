@@ -13,7 +13,8 @@ exports.sourceNodes = ({ actions, createNodeId, createContentDigest }) => {
       authors: "Jakub Jetmar, Jiří Logojda, Štěpán Šanda",
       intro:
         "Hannah Arendt, německo-židovská emigrantka, je možná nejznámější teoretičkou totalitarismu. Jakkoliv se ve své pozdější práci posouvá od pojmu radikální zlo k banalitě zla, její <em>Původ totalitarismu</em>, který vyšel jako bezprostřední reakce na hrůzy druhé světové války, je kanonickým dílem pro teorii totalitarismu. Mimo to se ve svém díle zabývá i masovou společností a kulturou nebo rolí a zodpovědností jednotlivce ve společnosti.",
-      examplePrefixes: ["Evil is banal, because", "Totalitarian system is"],
+      notebookLink:
+        "https://colab.research.google.com/drive/1tqL-1ijHYJXhvxHL3dkIJfYF5grOaz-R#sandboxMode=true",
     },
     {
       slug: "gilles-deleuze-and-felix-guattari",
@@ -25,11 +26,9 @@ exports.sourceNodes = ({ actions, createNodeId, createContentDigest }) => {
         "<em>Anti-Oedipus</em>, <em>A Thousand Plateaus</em> and <em>What Is Philosophy?</em>",
       authors: "Veronika Hanáková, Tomáš Kovařík, Jan Vlček",
       intro:
-        "Gilles Deleuze (1925–1995) byl významný francouzký teoretik věnující se filozofii, literatuře, filmu a umění, kterého řadíme do poststrukturalismu. Napsal mnoho děl, ale tři napsané spolu s Félixem Guattarim (1930–1992) jsou ty nejpopulárnější. V prvním z nich, <em>Anti-Oidipus</em>, nahlíží na společnost perspektivou stroje — člověk jako stroj poskládaný ze strojů tvořící další větší stroje, všechny stroje pak hnané chtíčem a produkcí. V díle <em>Tisíc plošin</em> popisují kromě jiného vědění jako stále se měnící síť bez začátku a konce, kterou přirovnávají k rhizomu, oddenku, kořenovité struktuře, ze které vidíme jen záblesky a nikdy ne strukturu celou. V posledním <em>Co je filosofie?</em> je pak hlavním tématem definování role filosofie jako tvoření pojmů, stojící vedle vědy a umění. (Pozn.: Shrnutí děl jsou VELMI zjednodušená pro alespoň základní přehled.)",
-      examplePrefixes: [
-        "What is the motivation of an artificial intelligence?",
-        "For artificial brain to be a philosopher, it has to",
-      ],
+        "Gilles Deleuze (1925–1995) byl významný francouzký teoretik věnující se filozofii, literatuře, filmu a umění, kterého řadíme do poststrukturalismu. Napsal mnoho děl, ale tři napsané spolu s Félixem Guattarim (1930–1992) jsou ty nejpopulárnější. V prvním z nich, <em>Anti-Oidipus</em>, nahlíží na společnost perspektivou stroje — člověk jako stroj poskládaný ze strojů tvořící další větší stroje, všechny stroje pak hnané chtíčem a produkcí. V díle <em>Tisíc plošin</em> popisují kromě jiného vědění jako stále se měnící síť bez začátku a konce, kterou přirovnávají k rhizomu, oddenku, kořenovité struktuře, ze které vidíme jen záblesky a nikdy ne strukturu celou. V posledním <em>Co je filosofie?</em> je pak hlavním tématem definování role filosofie jako tvoření pojmů, stojící vedle vědy a umění.",
+      notebookLink:
+        "https://colab.research.google.com/drive/1eocMzt8U3tqEfCloaiwm3Na3DeSojZoS#sandboxMode=true",
     },
     {
       slug: "michel-foucault",
@@ -42,10 +41,8 @@ exports.sourceNodes = ({ actions, createNodeId, createContentDigest }) => {
       authors: "Anna Lamberová, Karolína Foitlová, Filip Štochl",
       intro:
         "Michel Foucault je reprezentantem francouzské intelektuální avantagardy 70. let 20. století. Ačkoliv samotný Foucault odmítal být označován za filozofa, bývá mnohými považován za představitele filozofie tzv. poststrukturalismu. Také byl profesorem na prestižní francouzské univerzitě Collège de France, historikem a teoretikem kultury. Foucaultovo starší dílo je produktem jeho snahy o porozumění společnosti skrze archeologii vědění. Ve svých knihách se zabývá především chápáním moci a pojmy jako sexualita, šílenství, epistémé nebo diskurz.",
-      examplePrefixes: [
-        "If I lived today, the most important thing I would say to young people would be",
-        "Are you human or machine?",
-      ],
+      notebookLink:
+        "https://colab.research.google.com/drive/1qVHVpNG6-P8kPoh48minq_e9J3WEm5LL#sandboxMode=true",
     },
     {
       slug: "vaclav-havel",
@@ -58,10 +55,8 @@ exports.sourceNodes = ({ actions, createNodeId, createContentDigest }) => {
       authors: "Jakub Jetmar, Jiří Logojda, Štěpán Šanda",
       intro:
         "Mimo politika-prezidenta také disident, esejista a dramatik. V 70. letech píše slavný esej <em>Moc bezmocných</em>, v němž definuje post-totalitní systém a přemýšlí nad rolí a zodpovědností jedince v systému. V tomto období je také kritikem masové kultury i toho, že tradiční západní demokracie „nabízely způsob, jak zásadně čelit ‚samopohybu‘ technické civilizace i&nbsp;industriální a&nbsp;konzumní společnosti.“",
-      examplePrefixes: [
-        "Post-totalitarian system is",
-        "Any existential revolution should provide hope",
-      ],
+      notebookLink:
+        "https://colab.research.google.com/drive/1YeH6DCMeLI4-qhBkg98NRuPRJlqDFarF#sandboxMode=true",
     },
     {
       slug: "tomas-sedlacek",
@@ -74,10 +69,8 @@ exports.sourceNodes = ({ actions, createNodeId, createContentDigest }) => {
       authors: "Adam Cironis, Tomáš Eliaš, Lucie Krejzlová",
       intro:
         "Tomáš Sedláček je český významný ekonom a&nbsp;filozof, který v&nbsp;minulosti působil jako poradce prezidenta Václava Havla a&nbsp;ministra financí. Je autorem knihy <em>Ekonomie dobra a&nbsp;zla</em>, která byla přeložena do 21&nbsp;jazyků. V&nbsp;současné době působí jako hlavní makroekonomický stratég ČSOB.",
-      examplePrefixes: [
-        "Do you think that happiness comes from wealth?",
-        "What is a guaranteed path to success?",
-      ],
+      notebookLink:
+        "https://colab.research.google.com/drive/1gEC-5nzaPZKxDx4KDWU3v8nQG6Bz2MV5#sandboxMode=true",
     },
     {
       slug: "peter-singer",
@@ -89,7 +82,8 @@ exports.sourceNodes = ({ actions, createNodeId, createContentDigest }) => {
         "<em>All animals are equal</em>, <em>Famine, affluence and morality</em>, <em>Animal liberation</em>, <em>Practical Ethics</em>, <em>Ethics and Intuitions</em> and <em>Speciesism and moral status</em>",
       authors: "Lenka Pittnerová, Alfréd Schubert, Anežka Studničková",
       intro: "",
-      examplePrefixes: [],
+      notebookLink:
+        "https://colab.research.google.com/drive/1oS2IZouaRdAIiuw9pcTmXF-eeovp6FMX#sandboxMode=true",
     },
   ]
   corpuses.forEach(corpus => {
@@ -101,7 +95,7 @@ exports.sourceNodes = ({ actions, createNodeId, createContentDigest }) => {
       textsEn: corpus.textsEn,
       authors: corpus.authors,
       intro: corpus.intro,
-      examplePrefixes: corpus.examplePrefixes,
+      notebookLink: corpus.notebookLink,
       id: createNodeId(`Corpus-${corpus.slug}`),
       internal: {
         type: "Corpus",
@@ -135,7 +129,7 @@ exports.createPages = async ({ graphql, actions, reporter }) => {
             textsEn
             authors
             intro
-            examplePrefixes
+            notebookLink
           }
         }
       }

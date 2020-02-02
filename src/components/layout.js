@@ -224,28 +224,14 @@ const Layout = ({ children, lang, langLink, noHeaderAndFooter, noIntro }) => {
           )}
           {lang === "cs" && (
             <p>
-              Asembláž webu za pomoci knihoven{" "}
-              <a href="https://github.com/minimaxir/gpt-2-simple">
-                gpt-2-simple
-              </a>{" "}
-              a{" "}
-              <a href="https://github.com/minimaxir/gpt-2-cloud-run">
-                gpt-2-cloud-run
-              </a>{" "}
-              pospojoval <a href="mailto:jan.vlcek@vlki.cz">Jan Vlček</a>.
+              Asembláž webu pospojoval{" "}
+              <a href="mailto:jan.vlcek@vlki.cz">Jan Vlček</a>.
             </p>
           )}
           {lang === "en" && (
             <p>
-              Assemblage of this web was created with the help of libraries{" "}
-              <a href="https://github.com/minimaxir/gpt-2-simple">
-                gpt-2-simple
-              </a>{" "}
-              and{" "}
-              <a href="https://github.com/minimaxir/gpt-2-cloud-run">
-                gpt-2-cloud-run
-              </a>{" "}
-              by <a href="mailto:jan.vlcek@vlki.cz">Jan Vlček</a>.
+              Assemblage of this web was created by{" "}
+              <a href="mailto:jan.vlcek@vlki.cz">Jan Vlček</a>.
             </p>
           )}
         </footer>
