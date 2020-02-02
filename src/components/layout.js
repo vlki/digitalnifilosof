@@ -225,13 +225,21 @@ const Layout = ({ children, lang, langLink, noHeaderAndFooter, noIntro }) => {
           {lang === "cs" && (
             <p>
               Asembláž webu pospojoval{" "}
-              <a href="mailto:jan.vlcek@vlki.cz">Jan Vlček</a>.
+              <a href="mailto:jan.vlcek@vlki.cz">Jan Vlček</a>, kód{" "}
+              <a href="https://github.com/vlki/digitalnifilosof">
+                dostupný na GitHubu
+              </a>
+              .
             </p>
           )}
           {lang === "en" && (
             <p>
-              Assemblage of this web was created by{" "}
-              <a href="mailto:jan.vlcek@vlki.cz">Jan Vlček</a>.
+              Assemblage of this website was linked by{" "}
+              <a href="mailto:jan.vlcek@vlki.cz">Jan Vlček</a>, code is{" "}
+              <a href="https://github.com/vlki/digitalnifilosof">
+                available on GitHub
+              </a>
+              .
             </p>
           )}
         </footer>
