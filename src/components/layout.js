@@ -97,7 +97,7 @@ const Layout = ({ children, lang, langLink, noHeaderAndFooter, noIntro }) => {
                     </a>{" "}
                     taught as part of{" "}
                     <a href="http://novamedia.ff.cuni.cz/">
-                      New media studies at Faculty of Arts at the Charles
+                      New media studies at Faculty of Arts at Charles
                       University
                     </a>{" "}
                     during Autumn 2019 by Mgr.&nbsp;Dita Malečková, Ph.D. (ÚISK
