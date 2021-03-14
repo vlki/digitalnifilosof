@@ -2,8 +2,8 @@ import React from "react"
 import { Link } from "gatsby"
 import { css } from "styled-components"
 
-import Layout from "../components/Layout"
-import TitleAndMetaTags from "../components/TitleAndMetaTags"
+import Layout from "../components/Layout.js"
+import TitleAndMetaTags from "../components/TitleAndMetaTags.js"
 
 const CorpusTemplate = ({ pageContext: { corpus, lang = "cs" } }) => (
   <Layout
