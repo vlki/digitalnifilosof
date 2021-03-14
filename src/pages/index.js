@@ -2,7 +2,7 @@ import React from "react"
 import { Link, useStaticQuery, graphql } from "gatsby"
 import { css } from "styled-components"
 
-import Layout from "../components/Layout"
+import SiteLayout from "../components/SiteLayout"
 import TitleAndMetaTags from "../components/TitleAndMetaTags"
 
 const IndexPage = ({ pageContext: { lang = "cs" } }) => {
@@ -23,7 +23,7 @@ const IndexPage = ({ pageContext: { lang = "cs" } }) => {
   )
 
   return (
-    <Layout lang={lang} langLink={lang === "cs" ? "/en/" : "/"}>
+    <SiteLayout lang={lang} langLink={lang === "cs" ? "/en/" : "/"}>
       <TitleAndMetaTags lang={lang} />
       <main
         css={css`
@@ -100,7 +100,7 @@ const IndexPage = ({ pageContext: { lang = "cs" } }) => {
           ))}
         </div>
       </main>
-    </Layout>
+    </SiteLayout>
   )
 }
 

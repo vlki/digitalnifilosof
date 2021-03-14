@@ -5,7 +5,7 @@ import { css, createGlobalStyle } from "styled-components"
 
 import "../styles/normalize.css"
 
-const Layout = ({ children, lang, langLink, noHeaderAndFooter, noIntro }) => {
+const SiteLayout = ({ children, lang, langLink, noHeaderAndFooter, noIntro }) => {
   return (
     <>
       <GlobalStyle />
@@ -247,18 +247,18 @@ const Layout = ({ children, lang, langLink, noHeaderAndFooter, noIntro }) => {
   )
 }
 
-Layout.propTypes = {
+SiteLayout.propTypes = {
   children: PropTypes.node.isRequired,
   noHeaderAndFooter: PropTypes.bool,
   noIntro: PropTypes.bool,
 }
 
-Layout.defaultProps = {
+SiteLayout.defaultProps = {
   noHeaderAndFooter: false,
   noIntro: false,
 }
 
-export default Layout
+export default SiteLayout
 
 const GlobalStyle = createGlobalStyle`
 	html {

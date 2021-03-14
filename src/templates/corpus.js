@@ -2,11 +2,11 @@ import React from "react"
 import { Link } from "gatsby"
 import { css } from "styled-components"
 
-import Layout from "../components/Layout.js"
-import TitleAndMetaTags from "../components/TitleAndMetaTags.js"
+import SiteLayout from "../components/SiteLayout"
+import TitleAndMetaTags from "../components/TitleAndMetaTags"
 
 const CorpusTemplate = ({ pageContext: { corpus, lang = "cs" } }) => (
-  <Layout
+  <SiteLayout
     noIntro
     lang={lang}
     langLink={lang === "cs" ? "/en/" + corpus.slug : "/" + corpus.slug}
@@ -102,7 +102,7 @@ const CorpusTemplate = ({ pageContext: { corpus, lang = "cs" } }) => (
         )}
       </div>
     </main>
-  </Layout>
+  </SiteLayout>
 )
 
 export default CorpusTemplate

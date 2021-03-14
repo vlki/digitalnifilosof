@@ -2,11 +2,11 @@ import React from "react"
 import { css } from "styled-components"
 import { Link } from "gatsby"
 
-import Layout from "../components/Layout"
+import SiteLayout from "../components/SiteLayout"
 import TitleAndMetaTags from "../components/TitleAndMetaTags"
 
 const NotFoundPage = () => (
-  <Layout noHeaderAndFooter lang="cs">
+  <SiteLayout noHeaderAndFooter lang="cs">
     <TitleAndMetaTags lang="cs" />
     <main
       css={css`
@@ -36,7 +36,7 @@ const NotFoundPage = () => (
         </Link>
       </div>
     </main>
-  </Layout>
+  </SiteLayout>
 )
 
 export default NotFoundPage
