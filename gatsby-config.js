@@ -13,5 +13,13 @@ module.exports = {
     },
     `gatsby-plugin-styled-components`,
     `gatsby-plugin-react-helmet`,
+    {
+      resolve: "gatsby-plugin-matomo",
+      options: {
+        siteId: "3",
+        matomoUrl: "https://matomo.vlki.cz/",
+        siteUrl: "https://digitalnifilosof.cz/",
+      },
+    },
   ],
 }
